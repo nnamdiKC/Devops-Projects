@@ -26,3 +26,18 @@ This command allows users navigate their directories/folders.
 "cd --" takes you back to the user directory as seen below.
 
 ![Alt text](<Images/Screenshot 2024-01-17 105136.png>)
+
+
+
+# 4. 'ls' command
+list files and directories within a system and it has the ffg. options
+
+ls -R
+
+ls -a
+
+ls -lh
+
+![Alt text](<Images/Screenshot 2024-01-17 114752.png>)
+
+![Alt text](<Images/Screenshot 2024-01-17 115046.png>)
