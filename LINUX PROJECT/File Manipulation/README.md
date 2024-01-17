@@ -41,3 +41,12 @@ ls -lh
 ![Alt text](<Images/Screenshot 2024-01-17 114752.png>)
 
 ![Alt text](<Images/Screenshot 2024-01-17 115046.png>)
+
+
+
+# 5. 'cat' command
+This command reads, combines and writes file content on the CLI
+
+It can also be used to merge/concatenate files and their contents. see image below
+
+![Alt text](<Images/Screenshot 2024-01-17 132434.png>)
