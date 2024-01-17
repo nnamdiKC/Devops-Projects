@@ -1,7 +1,7 @@
 # Linux Practice Projects
 
 ## 1. 'sudo' superuser do command
-Allow you perform tasks that require administrative or root permission.
+Allows you perform tasks that require administrative or root permission.
 It requires user authentication
 
 ![Alt text](<Images/Screenshot 2024-01-15 165617.png>)
@@ -12,3 +12,17 @@ It requires user authentication
 This command displays your present working directory. It shows the path to the current working directory using slash (l)
 
 ![Alt text](<Images/Screenshot 2024-01-15 173841.png>)
+
+
+
+## 3. 'cd' chnage directory command
+This command allows users navigate their directories/folders. 
+
+"cd (foldername or path)" e.g cd CommandsLinux or cd /home/nnamdi/CommandsLinux
+
+### Options for cd include cd - and cd --
+"cd -" takes you back to the previous directory and 
+
+"cd --" takes you back to the user directory as seen below.
+
+![Alt text](<Images/Screenshot 2024-01-17 105136.png>)
