@@ -50,3 +50,15 @@ This command reads, combines and writes file content on the CLI
 It can also be used to merge/concatenate files and their contents. see image below
 
 ![Alt text](<Images/Screenshot 2024-01-17 132434.png>)
+
+
+
+# 6. 'cp' command
+Copy files to and fro directories, ***cp filename directory path***
+
+copy contents from one file to another file, ***cp source filename destination filename*** (ensure to add the filename extensions e.g .txt)
+
+copy entire directories, ***cp source dir destination dir***
+
+
+
