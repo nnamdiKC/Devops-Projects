@@ -86,7 +86,7 @@ In the image below, I have simply used ***mv current filename new filename*** to
 
 This command is used to create new directories. In the image below I used 'mkdir' to create the folder Project_backup and Gitcommands.
 
-The command options "-p" and "-m" are used to create folders in-between existing folders or create folders with permissions.
+The command options "-p" and "-m" are used to create folders in-between existing folders and create folders with permissions respectively.
 
 ![Alt text](mkdir.png)
 
