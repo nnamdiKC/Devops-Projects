@@ -68,3 +68,25 @@ Here I copied the directory commandlist in Linuxcommand directory to Documents.
 ![Alt text](<cp entiredir.png>)
 
 
+
+# 7. mv command:
+
+This is used to **move and rename** files and directories.
+
+![Alt text](<mv files_dirs.png>)
+
+In the image below, I have simply used ***mv current filename new filename*** to rename a file sqlite_commands.sh to sql_commands.sh
+
+![Alt text](<mv rename.png>)
+
+
+
+
+# 8. mkdir command:
+
+This command is used to create new directories. In the image below I used 'mkdir' to create the folder Project_backup and Gitcommands.
+
+The command options "-p" and "-m" are used to create folders in-between existing folders or create folders with permissions.
+
+![Alt text](mkdir.png)
+
