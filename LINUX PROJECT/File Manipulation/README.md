@@ -56,9 +56,15 @@ It can also be used to merge/concatenate files and their contents. see image bel
 # 6. 'cp' command
 Copy files to and fro directories, ***cp filename directory path***
 
-copy contents from one file to another file, ***cp source filename destination filename*** (ensure to add the filename extensions e.g .txt)
+![Alt text](<cp filestodir.png>)
 
-copy entire directories, ***cp source dir destination dir***
+copy contents of one file to a new file, ***cp source filename destination filename*** (ensure to add the filename extensions e.g .txt) In the shot below, I copied the content of firstfile.txt to a new file i created named fourthfile.txt
 
+![Alt text](<Images/cp filecontent.png>)
+
+copy entire directories, ***cp -R source dir destination dir***
+Here I copied the directory commandlist in Linuxcommand directory to Documents.
+
+![Alt text](<cp entiredir.png>)
 
 
