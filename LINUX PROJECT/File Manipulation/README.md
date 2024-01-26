@@ -128,4 +128,36 @@ This command is used to find files in the database system. Using the option **-i
 
 This command will search for files within a specific directory.
 
-find 
+The syntax: find [path] [option] [expression/filename]
+
+In the image below, the path is "/home" the command option is "-name" and the filename is "sql_commands.sh
+
+![Alt text](<find command.png>)
+
+Other options: "find -name filename" (to find a file in the current directory)
+
+![Alt text](<Images/find -name option.png>)
+
+"find ./ -type d -name [directory name]"
+
+![Alt text](<Images/find -type d.png>)
+
+
+
+# 14. 'grep' command
+
+This command is used to search for specific word in a file in the current folder. The output will print all the lines containing the word.
+
+![Alt text](<Images/grep command.png>)
+
+
+
+# 15. 'df' command
+
+We use df command to report the system's disk usage. This is displayed in percentage (%) and various capacities/sizes in kB, MB or GB
+
+![Alt text](<Images/df command.png>)
+
+other options: df -m displays in MB, df -k dislays the sizes in Kb while df -T displays in Kb and additionally reports the file Types.
+
+![Alt text](<Images/df -m-k-T options.png>)
