@@ -90,3 +90,42 @@ The command options "-p" and "-m" are used to create folders in-between existing
 
 ![Alt text](mkdir.png)
 
+
+
+# 9. 'rmdir' command:
+
+This command is used to permanently delete folders/directories. The user must have sudo priviledges in order to use this command.
+
+![Alt text](<Images/rmdir command.png>)
+
+
+
+# 10. 'rm' command
+
+Use this command to permanently delete files. The user must have *write* permissions. In the image below, I demonstrated how *rm* command can delete a single file and multiple files. Remember to double check before deleting as this operation cannot be undone.
+
+![Alt text](<Images/rm command.png>)
+
+
+
+# 11. 'touch' command:
+
+This command is used to create new files. It is also used to generate and modify a timestamp in the Linux command line.
+
+![Alt text](<Images/touch command.png>)
+
+
+
+# 12. 'locate' command:
+
+This command is used to find files in the database system. Using the option **-i** with the 'locate' command will turn of case sensitiity to avoid limitations during search especially when one doesn't remember the exact file name. see image below
+
+![Alt text](<Images/locate command.png>)
+
+
+
+# 13. 'find' command:
+
+This command will search for files within a specific directory.
+
+find 
