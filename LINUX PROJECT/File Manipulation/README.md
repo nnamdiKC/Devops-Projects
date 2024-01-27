@@ -161,3 +161,44 @@ We use df command to report the system's disk usage. This is displayed in percen
 other options: df -m displays in MB, df -k dislays the sizes in Kb while df -T displays in Kb and additionally reports the file Types.
 
 ![Alt text](<Images/df -m-k-T options.png>)
+
+
+
+# 16. 'du' command:
+
+This command will tell you how much space a file or directory takes up on the system. The directory path has to be specified. The example below shows the space taken up by the file named firstfile.txt and the directory Linuxcommands (Note: that there is a folder in named commandlist with 4kb in Linuxcommands)
+
+![Alt text](<Images/du command.png>)
+
+See other du command options in action in the image beloow:
+
+![Alt text](<Images/du options.png>)
+
+
+
+# 17. 'head' command:
+
+This command prints out the first 10 line of text in a file.
+
+![Alt text](<Images/head command.png>)
+
+See what other options of 'head' command can do in the image below: 
+***head -n prints out specified number of lines*** 
+***head -c prints the first number of bytes from the file specified***  
+***head -q prints first few lines of multiple files without their headers***
+***head -v prints 10 lines of text with the filename as header***
+
+![Alt text](<Images/head -n command.png>)
+
+![Alt text](<Images/head -v command.png>)
+
+![Alt text](<Images/head -c command.png>)
+
+![Alt text](<Images/head -v -q command.png>)
+
+
+
+# 18. 'tail' command
+
+
+
