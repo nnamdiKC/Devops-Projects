@@ -200,5 +200,13 @@ See what other options of 'head' command can do in the image below:
 
 # 18. 'tail' command
 
+This command prints the last 10 lines of text in a specified file. The file state.txt has a list of some states in Nigeria, ***tail state.txt*** prints the last 10 states in the list.
+
+![Alt text](<Images/tail command.png>)
+
+The 'tail' command is a complimentary of the 'head' command. They have the same options -n, -c, -q, -v and -f see some of the commands and theeir output.
+
+![Alt text](<Images/tail options -n -c.png>)
+
 
 
