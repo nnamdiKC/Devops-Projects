@@ -208,5 +208,36 @@ The 'tail' command is a complimentary of the 'head' command. They have the same 
 
 ![Alt text](<Images/tail options -n -c.png>)
 
+![Alt text](<Images/tail -q command.png>)
 
 
+
+# 19. 'diff' command
+
+This command is used to display the differences in files by comparing the files line by line. I have compared 2 files a.txt and b.txt containing LGAs in Lagos. See the output below.
+
+![Alt text](<Images/diff command.png>)
+
+Other 'diff' command options I tried are:
+
+'diff -c' to view the differences in context mode
+
+![Alt text](<Images/diff -c.png>)
+
+'diff -u' to view the differences in unified mode
+
+![Alt text](<Images/diff -u.png>)
+
+'diff -i' to show case sensitive differences
+
+![Alt text](<Images/diff -i.png>)
+
+
+
+# 20. 'tar' command
+
+This is used to achive files; ***tar [option] [archive_file] [file or directory to be archived]***
+
+I used the command to archive contents of Linuxcommands directory in the image below. The new tar file is **Linuxcommands.tar**
+
+![Alt text](<Images/tar -vcf command.png>)
