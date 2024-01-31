@@ -94,4 +94,76 @@ This displays user manual for commands in Linux.
 
 ![Alt text](<Images/man command.png>)
 
-This is only 17% (39 lines) of the information in the user manual for '**ls**' command.
+This is only 17% (39 lines) of the information in the user manual for '**ls**' command. The full manual contains 226 lines of information.
+
+
+
+# 31. 'echo' command
+
+This is a command that allows users to display lines of text or strings that are passed as arguments.
+
+![Alt text](<Images/echo command.png>)
+
+
+
+
+# 32. 'zip', 'unzip' commands
+
+The zip command is used to compress files into a ZIP file usually to reduce disk usage. It is also used for archiving files and directories. Using zip, I compressed *capital.txt and state.txt to archive2.zip* I also unzipped the file to extract them again.
+
+![Alt text](<Images/zip and unzip command.png>)
+
+
+
+
+# 33. 'hostname' command
+
+I used this command to reveal my system's hostname.
+
+![Alt text](<Images/hostname command.png>)
+
+
+
+
+# 34. 'useradd', 'userdel commands
+
+useradd is for adding new Users or Accounts to the system while userdel deletes users or accounts. Only users with root priviledges can run these commands.
+
+![Alt text](Images/useradd.png)
+
+![Alt text](<Images/userdel command.png>)
+
+
+
+
+# 35. 'apt get' command
+
+This command retrieves information and packages from authenticated sources for installation, upgrade, and removal of packages along with their dependencies. Only users with sudo or root priviledges can use this command. I tried '*sudo apt-get update*' , see results below; this process updated package list of my Linux OS for available software packages.
+
+![Alt text](<Images/apt-get command.png>)
+
+
+
+
+# 36. 'nano', 'vi', and 'jed' commands
+
+The above commands are all used for editing or modifying files.
+
+nano comes with Linux OS, works with most most languages, it denotes keywords.
+
+![Alt text](Images/nano.png)
+
+vi also comes with Linux OS, has 2 working modes (insert and command modes). Insert mode is for editing while command mode is for operations such as save, quit, copy, paste, open.
+
+![Alt text](<Images/vi command.png>)
+
+while jed has a drop down menu that allows users perform actions without entering commands. It also works with modes. I will use 'sudo apt install jed' to install 'jed' before I can use it.
+
+![Alt text](<Images/apt install jed.png>)
+
+I used jed to add text to the file firstfile.txt demostrated in the image below.
+
+![Alt text](Images/jed.png)
+
+
+
