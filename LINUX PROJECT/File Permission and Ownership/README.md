@@ -167,3 +167,42 @@ I used jed to add text to the file firstfile.txt demostrated in the image below.
 
 
 
+
+# 37. 'alias', 'unalias' commands
+
+An alias is a user-defined shorthand for a longer command or sequence of commands. *alias* command instructs the shell to replace one string with another string while executing the commands. I have aliased the command *'cd Documents'* to become *'CD'*    *'alias -p'* option prints a list of aliases in the system.
+
+![Alt text](<Images/alias command.png>)
+
+'unalias' command will undo the alias.
+
+![Alt text](<Images/unalias command.png>)
+
+
+
+
+# 38. 'su' (switch user) command
+
+This command allows you run programs as a different user. It is important to note that when this command is executed, the user priviledges changes but it retains the current users environment. The benefit is to allow access to the system through SSH or use of GUI display manager when the root is unavailable.
+
+![Alt text](<Images/su command.png>)
+
+![Alt text](<Images/su -p command.png>)
+
+
+
+
+# 39. 'htop' command
+
+This command is used to monitor system processes and server resources in realtime. You can perform mouse operations and see visual indicators.
+
+![Alt text](<Images/htop command.png>)
+
+
+
+
+# 40. 'ps' (process status) command
+
+The ps command gives a snapshot of the running processes on your system. It shows the PID, Terminal type, TIME and CMD. Other options may have extended fields of information as shown in the image below.
+
+![Alt text](<Images/ps command.png>)
