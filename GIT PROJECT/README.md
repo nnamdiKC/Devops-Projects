@@ -49,5 +49,24 @@ We can merge the content of one branch to another branch. To achieve this, switc
 ![Alt text](<Images/git merge.png>)
 
 
+### Deleting Branches
 
+The command for deleting branches is **git branch -d <branchname>**
+
+![Alt text](<Images/git branch delete.png>)
+
+
+
+
+
+
+# Collaboration and Remote Repositories
+
+Git as a version control system can be used any where at anytime. Teams of developers residing any where in the world can use this system to collaborate.
+
+The tool used to achieve this is Github. Git hub is a web based platform where git repositories are hosted. Once your local repositories are hosted on Github, it becomes available either publicly for everyone to access or privately for you alone. All your work stored locally can be *pushed* to Github and vice versa. With this you can track every work on your repositories.
+
+Below is a screen shot of my Github account showing that I have 1 branch (main) and 1 repository (Devops-Projects) containing project directories (Linux practice and Git Projects).
+
+![Alt text](<Images/github account.png>)
 
