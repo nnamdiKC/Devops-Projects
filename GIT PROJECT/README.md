@@ -70,3 +70,17 @@ Below is a screen shot of my Github account showing that I have 1 branch (main) 
 
 ![Alt text](<Images/github account.png>)
 
+
+### Creating a Repository
+
+I have created a new repository **"Test Projects"**
+
+![Alt text](<Images/github new repo.png>)
+
+![Alt text](<Images/github new repo 2.png>)
+
+
+### Pushing my Local Git Repository to my Remote Github Repository
+
+
+
