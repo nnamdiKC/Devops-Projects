@@ -86,9 +86,60 @@ I have created a new repository **"Test Projects"**
 
 
 
-# Cloning Remote Repositories
+### Cloning Remote Repositories
 
 A remote repositories can be cloned to allow team members or others make contribution to projects.
 The idea of cloning is making an exact copy of a repository on Github to your local machine. The command is **git clone <link to your reomte repository>**
 
+![Alt text](<Images/git clone.png>)
 
+
+
+
+
+
+# Branch Management and Tagging
+
+### Introduction to Markdown Syntax
+
+   1. Headings: Use Hash tag (#)
+
+   # Heading 1 (single # before text)
+   ## Heading 2 (double ## before text)
+   ### Heading 3 (triple ### before text)
+
+
+   2. Emphasis: This is usaually made with Bold or Italic
+
+   *italic* (single * or _ before and after the text)
+
+   **bold** (double ** or __ before and after the text)
+
+
+   3. Lists: It can ordered or unordered
+
+   #### Ordered list
+    1. First Item
+    2. Second Item
+    3. Third Item
+
+   #### Unordered list
+    - Item 1
+    - Item 2
+    - Item 3
+
+   4. Hyperlinks: Type the text for the link in a square bracket followed by the link itself in parenthesis.
+
+   [visit dareio.com](https://www.dareyio.com)
+
+
+   5. Images: Starts with an **!** then **[Alt Text]** and image link in parenthesis **(Images/a puppy.png)**. The image storage location has to be available always in order for the image to display.
+
+   ![Alt text](<Images/a puppy.png>)
+
+
+   6. Code: Backtick **' '** is used to eclose code or snipets of codes.
+
+   'console.log('Welcome to darey.io')'
+
+   
