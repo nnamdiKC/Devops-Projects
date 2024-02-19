@@ -82,5 +82,13 @@ I have created a new repository **"Test Projects"**
 
 ### Pushing my Local Git Repository to my Remote Github Repository
 
+![Alt text](<Images/git push to remote.png>)
+
+
+
+# Cloning Remote Repositories
+
+A remote repositories can be cloned to allow team members or others make contribution to projects.
+The idea of cloning is making an exact copy of a repository on Github to your local machine. The command is **git clone <link to your reomte repository>**
 
 
