@@ -133,7 +133,7 @@ The idea of cloning is making an exact copy of a repository on Github to your lo
    [visit dareio.com](https://www.dareyio.com)
 
 
-   5. Images: Starts with an **!** then **[Alt Text]** and image link in parenthesis **(<Images/a puppy.png>)**. The image storage location has to be available always in order for the image to display.
+   5. Images: Starts with an **!** then **[Alt Text]** and image link in parenthesis **(<Images/a puppy.png>)**. The image storage location has to be available always (whether locally or online) in order for the image to display.
 
    ![Alt text](<Images/a puppy.png>)
 
