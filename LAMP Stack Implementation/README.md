@@ -50,3 +50,15 @@ run 'sudo Mysql' to login to Mysql server as admin user **root**.
 
 ![Alt text](Images/login_mysql.png)
 
+Secure access to Mysql server by intorducing a password.
+
+run 'ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'PassWord.1';' to define the user password as "PassWord.1"
+
+![Alt text](<Images/define mysql password.png>)
+
+Exit mysql server by typing 'exit' and press enter.
+
+![Alt text](<Images/exit mysql.png>)
+
+run 'sudo mysql_secure_installation' to start the interactive script.
+
