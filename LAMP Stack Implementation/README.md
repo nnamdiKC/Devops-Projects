@@ -124,8 +124,54 @@ To avoid any conflicts, disable the default site that comes with apache2 install
 Notice that I have realoded Apache2 server using the command **'sudo systemctl reload apache2'** to allow the changes take effect.
 
 
-Run 'sudo apache2ctl configtest' to ensure your config file doesn't contain syntax errors.
+Run 'sudo apache2ctl configtest'to ensure your config file doesn't contain syntax errors.
 
 ![Alt text](<Images/apache2 configtest.png>)
 
+create a website file index.html in projectlamp directory
 
+'sudo echo 'Hello LAMP from hostname' $ (curl -s http://169.254.169.254/latest/meta-data/public-hostname) 'with public IP' $(curl -s http://169.254.169.254/latest/meta-data/public-ipv4) > /var/www/projectlamp/index.html'
+
+![Alt text](<Images/test website index-html.png>)
+
+Test that the website is working by entering the url in the browser: http://(my-public-ip):80
+
+![Alt text](Images/index_html.png)
+
+You can use the public DNS as well with or without the port will give same output; http://ec2-51-20-95-235.eu-north-1.compute.amazonaws.com
+
+![Alt text](<Images/index-html using pub DNS.png>)
+
+
+
+# Creating a Virtual Host for Your Website using Apache
+#### Step 5 - Enable PHP on the website
+
+Change the order in which the index.php file is arranged to allow it being the first to be accessed.
+
+![Alt text](<Images/vim dir-conf.png>)
+
+Run 'sudo systemctl reload apache2' to reload Apache2 for changes to take effect
+
+![Alt text](<Images/reload apache2.png>)
+
+
+Create a PHP file to test that PHP is correctly installed and configured on the server
+
+run 'vim /var/www/projectlamp/index.php' to create and edit index.php
+
+![Alt text](<Images/vim index-php.png>)
+
+After editing and saving the file index.php, refresh the URL and it should display the webpage below:
+
+![Alt text](<Images/index.php page.png>)
+
+After viewing the page, we may need to delete the index.php file as it contains sensitive information about your server and PHP environment.
+
+run 'sudo rm /var/www/projectlamp/index.php' to remove the file.
+
+![Alt text](<Images/rm index-php.png>)
+
+If you refresh the webpage again, it returns to the index.html which is the only file in projectlamp directory and the next file in line in the dir.conf script.
+
+![Alt text](<Images/back to index-html.png>)
