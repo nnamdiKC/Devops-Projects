@@ -1,8 +1,8 @@
 # Project 2 - LEMP Stack Implementation
-## LEMP Stands for Linux, NGINX, MySQL and PHP.
+## LEMP - Linux, NGINX, MySQL and PHP.
 It is another web stack technology that is used to create websites or web based applications. This project targets proficiency in building dynamic websites with LEMP stack, exploring techniques for handling user requests, interacting with databases, processing forms and implementing robust security measures. It will reveal popular frameworks and tools that can elevate productivity and simplify web application development process.
 
-#### Step 0 - Preparing Prerequisites
+### Step 0 - Preparing Prerequisites
 
 I fired up an instance on my AWS account
 
@@ -13,7 +13,8 @@ Using Git Bash, I connected to my server insatance with the following command:
 ![alt text](<Images/git bash connect to ec2.png>)
 
 
-#### Step 1 - Installing the Nginx Web Server
+### Step 1 - Installing the Nginx Web Server
+
 Nginx will eable us display web pages to our site visitors. It is a high performance web server.
 
 First, I'll update my Ubuntu server with:
@@ -50,7 +51,8 @@ Nginx server can also respond to rquest from the internet. Using any browser ent
 
 
 
-#### Step 2 - Installing MySQL
+### Step 2 - Installing MySQL
+
 As previously seen, Mysql is a database management system (DBMS) that stores and manages data for our website in a relational database.
 
     'sudo apt install mysql-server' will istall MySQL DBMS
@@ -68,6 +70,42 @@ I will run a security script; preinstalled with MySQL that will over-write some 
 
 ![alt text](<Images/secure mysql_LEMP.png>)
 
+I stated the interactive secure mysql installation script which I used to secure my database. With this I have set a new password on the MEDIUM level of password validation policy for accessing my database.
+    'sudo mysql_secure_installation'
+
+![alt text](<Images/secure mysql_LEMP (2).png>)
+
+Let us test the efficacy of the password I have set:
+
+    'sudo mysql -p' #The -p flag is used to prompt for password
+
+![alt text](<Images/sudo mysql -p.png>)
+
+Hurray! It works!
+
+For best practice and increased security, always set up dedicated users with less expansive priviledges for every database especially when hosting multiple databases on your server.
+
+Note: At the time of this writing, the native MySQL PHP library mysqlnd doesn’t support caching_sha2_authentication, the default authentication method for MySQL 8. For that reason, when creating database users for PHP applications on MySQL 8, you’ll need to make sure they’re configured to use mysql_native_password instead. We’ll demonstrate how to do that in Step 6.
+
+
+
+### Step 3 - Installing PHP
+
+PHP will process code and generate dynamic content for the web server.
+
+    To get our PHP running properly, I will install:
+    1. php-fpm, PHP fastCGI process manager - an external program that Nginx uses to handle PHP processing and acts as a bridge between the PHP interpreter itself and the web server.
+    2. php-mysql - a PHP module that allows PHP communicate with MySQL based databases.
+
+Both apps can be installed at once.
+
+    run 'sudo apt install php-fpm php-mysql'
+
+![alt text](<Images/install php-fpm_php-mysql.png>)
+
+
+
+### Step 4 - Configuring Nginx to Use PHP Processor
 
 
 
