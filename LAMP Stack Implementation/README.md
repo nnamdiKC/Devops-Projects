@@ -1,4 +1,6 @@
-# Preparing Prerequisites
+# LAMP Stack (Linux, Apache, MySQL, PHP or Python or Perl)
+
+## Preparing Prerequisites
 
     1. I created my AWS account
     2. I successfully launched an EC2 instance (ubuntu 22.04)
@@ -11,7 +13,7 @@
 
 
 
-# Installing Apache and Updating the Firewall
+## Installing Apache and Updating the Firewall
 
 #### Step 1 - Install Apache2 and Update the Firewall
     run 'sudo apt update'
@@ -38,7 +40,7 @@ Input "http://(public ip):80" on a web browser to access the Apache web server. 
 
 
 
-# Installing MySql
+## Installing MySql
 #### Step 2 - Install Mysql
 Mysql ia a relational database used with PHP. It allows for storage and management of data on our site.
 
@@ -72,7 +74,7 @@ run 'sudo mysql -p' : the flag -p, to allows for root user password prompt. I en
 
 
 
-# Installing PHP
+## Installing PHP
 #### Step 3 - Install PHP
 I will also istall php-mysql (a module that allows PHP communicate with mysql based database) and libapache2-mod-php ( amodule to enable Apache handle PHP files). All 3 packkages can be installed at once.
 run 'sudo apt install php libapache2-mod-php php-mysql' to install the 3 packages.
@@ -85,7 +87,7 @@ run 'php -v' to confirm the PHP installation and version.
 
 
 
-# Enabling PHP on The Website
+## Enabling PHP on The Website
 #### Step 4 - Creating a Virtual Host for your Website using Apache
 
 Setup a domain called "projectlamp" by creating a directory using command 'mkdir'.
@@ -144,7 +146,7 @@ You can use the public DNS as well with or without the port will give same outpu
 
 
 
-# Creating a Virtual Host for Your Website using Apache
+## Creating a Virtual Host for Your Website using Apache
 #### Step 5 - Enable PHP on the website
 
 Change the order in which the index.php file is arranged to allow it being the first to be accessed.
