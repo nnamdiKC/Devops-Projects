@@ -30,7 +30,7 @@ Add an Inbound rule to EC2 configuration to open inbound connection through port
 
 ![Alt text](<Images/inbound_port 80.png>)
 
-run 'curl http://localhost:80' or 'curl http://127.0.0.1:80' to request Apache HTTP Server on port 80.
+    run 'curl http://localhost:80' or 'curl http://127.0.0.1:80' to request Apache HTTP Server on port 80.
 
 ![Alt text](Images/curl_localhost.png)
 
@@ -44,17 +44,17 @@ Input "http://(public ip):80" on a web browser to access the Apache web server. 
 #### Step 2 - Install Mysql
 Mysql ia a relational database used with PHP. It allows for storage and management of data on our site.
 
-run 'sudo apt install Mysql-server'
+    run 'sudo apt install Mysql-server'
 
 ![Alt text](<Images/install Mysql.png>)
 
-run 'sudo Mysql' to login to Mysql server as admin user **root**.
+    run 'sudo Mysql' to login to Mysql server as admin user **root**.
 
 ![Alt text](Images/login_mysql.png)
 
 Secure access to Mysql server by intorducing a password.
 
-run 'ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'PassWord.1';' to define the user password as "PassWord.1"
+    run 'ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'PassWord.1';' to define the user password as "PassWord.1"
 
 ![Alt text](<Images/define mysql password.png>)
 
@@ -62,13 +62,13 @@ Exit mysql server by typing 'exit' and press enter.
 
 ![Alt text](<Images/exit mysql.png>)
 
-run 'sudo mysql_secure_installation' to start the interactive script to enable a password or not.
+    run 'sudo mysql_secure_installation' to start the interactive script to enable a password or not.
 
 ![Alt text](<Images/mysql secure1.png>)
 ![Alt text](<Images/mysql secure2.png>)
 
 
-run 'sudo mysql -p' : the flag -p, to allows for root user password prompt. I entered the password "PassWord.1" to access mysql since i didn't activate the VALIDATE PASSWORD PLUGIN.
+    run 'sudo mysql -p' : the flag -p, to allows for root user password prompt. I entered the password "PassWord.1" to access mysql since i didn't activate the VALIDATE PASSWORD PLUGIN.
 
 ![Alt text](<Images/sudo mysql-p.png>)
 
@@ -77,11 +77,11 @@ run 'sudo mysql -p' : the flag -p, to allows for root user password prompt. I en
 ## Installing PHP
 #### Step 3 - Install PHP
 I will also istall php-mysql (a module that allows PHP communicate with mysql based database) and libapache2-mod-php ( amodule to enable Apache handle PHP files). All 3 packkages can be installed at once.
-run 'sudo apt install php libapache2-mod-php php-mysql' to install the 3 packages.
+    run 'sudo apt install php libapache2-mod-php php-mysql' to install the 3 packages.
 
 ![Alt text](<Images/install PHP_libapache2_php-mysql.png>)
 
-run 'php -v' to confirm the PHP installation and version.
+    run 'php -v' to confirm the PHP installation and version.
 
 ![Alt text](<Images/php -v.png>)
 
@@ -91,14 +91,15 @@ run 'php -v' to confirm the PHP installation and version.
 #### Step 4 - Creating a Virtual Host for your Website using Apache
 
 Setup a domain called "projectlamp" by creating a directory using command 'mkdir'.
-run 'sudo mkdir /var/www/projectlamp'
+    run 'sudo mkdir /var/www/projectlamp'
+
 Also assign ownership to the directory by running 'sudo vi /etc/apache2/sites-available/projectlamp.conf'
 
 ![Alt text](<Images/sudo mkdir projectlamp.png>)
 
 Use 'vi' or 'vim' to create and edit the file "projectlamp.conf" in Apache's "sites available" directory.
 
-Run 'sudo vim /etc/apache2/sites-available/projectlamp.conf' and add the follwoing Virtual Host Configuration:
+    Run 'sudo vim /etc/apache2/sites-available/projectlamp.conf' and add the follwoing Virtual Host Configuration:
 
     <VirtualHost *:80>
         ServerName projectlamp
@@ -111,28 +112,29 @@ Run 'sudo vim /etc/apache2/sites-available/projectlamp.conf' and add the follwoi
 
 ![Alt text](<Images/sudo vim projectlamp.png>)
 
-Run 'sudo ls /etc/apache2/sites-available' to list files and as seen projectlamp.conf is available.
+    Run 'sudo ls /etc/apache2/sites-available' to list files and as seen projectlamp.conf is available.
 
 ![Alt text](<Images/sudo ls_projectlamp.png>)
 
-Run 'sudo a2ensite projectlamp' to enable the virtual host. "a2ensite" is a script that enables the specified site (in this case, www.projectlamp) contained in the virtual host config file.
+    Run 'sudo a2ensite projectlamp' to enable the virtual host. "a2ensite" is a script that enables the specified site (in this case, www.projectlamp) contained in the virtual host config file.
 
 ![Alt text](<Images/a2ensite projectlamp.png>)
 
-To avoid any conflicts, disable the default site that comes with apache2 installation (000-default). Run the command 'sudo a2dissite 000-default'
+To avoid any conflicts, disable the default site that comes with apache2 installation (000-default). 
+    Run the command 'sudo a2dissite 000-default'
 
 ![Alt text](<Images/a2dissite 000-default.png>)
 
 Notice that I have realoded Apache2 server using the command **'sudo systemctl reload apache2'** to allow the changes take effect.
 
 
-Run 'sudo apache2ctl configtest'to ensure your config file doesn't contain syntax errors.
+    Run 'sudo apache2ctl configtest'to ensure your config file doesn't contain syntax errors.
 
 ![Alt text](<Images/apache2 configtest.png>)
 
 create a website file index.html in projectlamp directory
 
-'sudo echo 'Hello LAMP from hostname' $ (curl -s http://169.254.169.254/latest/meta-data/public-hostname) 'with public IP' $(curl -s http://169.254.169.254/latest/meta-data/public-ipv4) > /var/www/projectlamp/index.html'
+    'sudo echo 'Hello LAMP from hostname' $ (curl -s http://169.254.169.254/latest/meta-data/public-hostname) 'with public IP' $(curl -s http://169.254.169.254/latest/meta-data/public-ipv4) > /var/www/projectlamp/index.html'
 
 ![Alt text](<Images/test website index-html.png>)
 
@@ -153,14 +155,14 @@ Change the order in which the index.php file is arranged to allow it being the f
 
 ![Alt text](<Images/vim dir-conf.png>)
 
-Run 'sudo systemctl reload apache2' to reload Apache2 for changes to take effect
+    Run 'sudo systemctl reload apache2' to reload Apache2 for changes to take effect
 
 ![Alt text](<Images/reload apache2.png>)
 
 
 Create a PHP file to test that PHP is correctly installed and configured on the server
 
-run 'vim /var/www/projectlamp/index.php' to create and edit index.php
+    run 'vim /var/www/projectlamp/index.php' to create and edit index.php
 
 ![Alt text](<Images/vim index-php.png>)
 
@@ -170,7 +172,7 @@ After editing and saving the file index.php, refresh the URL and it should displ
 
 After viewing the page, we may need to delete the index.php file as it contains sensitive information about your server and PHP environment.
 
-run 'sudo rm /var/www/projectlamp/index.php' to remove the file.
+    run 'sudo rm /var/www/projectlamp/index.php' to remove the file.
 
 ![Alt text](<Images/rm index-php.png>)
 
