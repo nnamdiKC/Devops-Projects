@@ -81,7 +81,7 @@ Let us test the efficacy of the password I have set:
 
 ![alt text](<Images/sudo mysql -p.png>)
 
-Hurray! It works!
+**Hurray! It works!**
 
 For best practice and increased security, always set up dedicated users with less expansive priviledges for every database especially when hosting multiple databases on your server.
 
