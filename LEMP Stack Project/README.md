@@ -107,5 +107,95 @@ Both apps can be installed at once.
 
 ### Step 4 - Configuring Nginx to Use PHP Processor
 
+Nginx web server allows for creation of server blocks to encapsulate configuration details and host more than one domain on a single server. I am using **projectLEMP** as domain name for this project.
+
+creating the root web directory for my_domain:
+
+    run 'sudo mkdir /var/www/projectLEMP'
+
+![alt text](<Images/mkdir projectLEMP.png>)
+
+Assign ownership of the directory with $USER environment variable to reference the current system user.
+
+    'sudo chown -R $USER:$USER /var/www/prjectLEMP'
+
+![alt text](<Images/chown projectLEMP.png>)
+
+Using *nano*, open a new config file in Nginx **sites-available** directory
+
+    'sudo nano /etc/nginx/sites-available/projectLEMP
+
+
+Drop the follwoing configuration in the file:
+
+    #/etc/nginx/sites-available/projectLEMP
+
+    server {
+        listen 80;
+        server_name projectLEMP www.projectLEMP;
+        root /var/www/projectLEMP;
+
+        index index.html index.htm index.php;
+
+        location / {
+            try_files $uri $uri/ =404;
+        }
+
+        location ~ \.php$ {
+            include snippets/fastcgi-php.conf;
+            fastcgi_pass unix:/var/run/php/php8.1-fpm.sock;
+        }
+
+        location ~ /\.ht {
+            deny all;
+        }
+
+    }
+
+![alt text](<Images/nano projectLEMP.png>)
+
+
+Activate the configuration by linking to the config file from Nginx's sites-enabled directory:
+
+    'sudo ln -s /etc/nginx/sites-available/projectLEMP /etc/nginx/sites-enabled/'
+
+![alt text](<Images/sudo ln-s projectLEMP.png>)
+
+Test the configuration for syntax errors:
+
+    'sudo nginx -t'
+
+![alt text](<Images/nginx -t.png>)
+
+I will also disable the default Nginx host that is currently configured to listen on port 80.
+
+    run 'sudo unlink /etc/nginx/sites-enabled/default'
+
+Then reload Nginx to apply changes:
+
+    'sudo systemctl reload nginx'
+
+![alt text](<Images/unlink and reload ngnix.png>)
+
+My website is active now. I'll add an index.html file to my web root directory /var/www/projectLEMP and test that the new server block works as expected.
+
+    'sudo echo 'Hello LEMP from hostname' $(curl -s http://169.254.169.254/latest/meta-data/public-hostname) 'with public IP' $(curl -s http://169.254.169.254/latest/meta-data/public-ipv4) > /var/www/projectLEMP/index.html'
+
+![alt text](<Images/add index-html to projectLEMP.png>)
+
+On my browser, **http://public-IP:80** (adding the prot number is optional)
+
+![alt text](<Images/Hello LEMP.png>)
+
+I will get same result as above when I use the DNS in place of public IP as seen below.
+
+![alt text](<Images/Hello LEMP with DNS.png>)
+
+
+
+
+### Step 5 - Testing PHP with Nginx
+
+
 
 
