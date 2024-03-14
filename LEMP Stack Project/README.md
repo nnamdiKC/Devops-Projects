@@ -196,6 +196,121 @@ I will get same result as above when I use the DNS in place of public IP as seen
 
 ### Step 5 - Testing PHP with Nginx
 
+I can say that at this point, my LEMP Stack is completely installed and fully operational. but I will also test it to validate that Nginx can hand *.php* files off to my PHP processor.
+
+I will do this by creating a PHP file (info.php) in my document root. I will use nano text editor for this.
+
+    'namo /var/www/projectLEMP/info.php'
+
+And add the following lines to the file.
+
+    <?php
+    phponfo();
+
+![alt text](<Images/nano info.php_LEMP.png>)
+
+I should be able to access this page on my website with the following url:
+
+    http://myserver_domain_or_IP/info.php
+
+![alt text](<Images/php info page_LEMP.png>)
+
+VOILA! It is working (Y)
+
+NOTE: The information on the PHP page is quite sensitive and so we may want to delete it to avoid unauthorized access to my server. The file can always be regenrated if needed later.
+
+    run 'sudo rm /var/www/projectLEMP/info.php'
+
+![alt text](<Images/rm info.php LEMP.png>)
 
 
 
+### Step 6 - Retreiving Data from MySQL Database with PHP
+
+Create a test database with a "Simple To-do List" and configure access to it so that Nginx website will be able to query data from the database and display it.
+
+    Database name: test_database
+    Username: test_user
+
+Let us connect to MySQL console using **root** account:
+
+    'sudo mysql -p'
+    # -p for password authentication
+
+![alt text](<Images/mysql -p console.png>)
+
+Create the new datadase "test_database"
+
+    'CREATE DATABASE test_database;'
+
+![alt text](<Images/mysql create testdb.png>)
+
+Create a user and grant him full priviledges on the database just created.
+
+    'CREATE USER 'test_user'@'%' IDENTIFIED WITH mysql_native_password BY 'Password@1';'
+
+![alt text](<Images/create new user mysql.png>)
+
+Now let us give the user (test_user) permission over the 'test_database' database. Full priviledges over this database only will be granted to this user but not on other databases on the server.
+
+    'mysql> GRANT ALL ON test_database.* TO 'test_user'@'%';'
+
+![alt text](<Images/grant priviledge mysql.png>)
+
+Exit mysql.
+
+    'exit'
+
+This will return:
+
+    'mysql> exit
+    Bye'
+
+Let us test if the user has the proper permissions by login into Mysql using the user's credentials.
+
+    'mysql -u test_user -p'
+
+![alt text](<Images/testing test_user access.png>)
+
+To also confirm that the 'test_user' has access to his database run:
+
+    'mysql> SHOW DATABASES;'
+
+![alt text](<Images/show db for test_user.png>)
+
+COOL!
+
+Let us create a table named **todo_list**.
+
+    'CREATE TABLE test_database.todo_list (item_id INT AUTO_INCREMENT,content VARCHAR(255),PRIMARY KEY(item_id));'
+
+    Output should read:
+    'Query OK, 0 rows affected (0.04 sec)do_list (item_id INT AUTO_INCREMENT,content VARCHAR(255),PRIMARY KEY(item_id));'
+
+We can add some rows to our table as well using the command:
+
+    'mysql> INSERT INTO example_database.todo_list (content) VALUES ("My first important item");'
+
+    Output should read:
+    'Query OK, 1 row affected (0.01 sec)'
+
+![alt text](<Images/todo_list table.png>)
+
+
+We can create a PHP script that will connect to MySQL and query for content. Using vi text editor, create a PHP file in the custom web root directory.
+
+    'vi /var/www/projectLEMP/todo_list.php'
+
+![alt text](<Images/todo_list.php file.png>)
+
+Save the script and quit the vi editor.
+
+If this is done properly, we should be able to access our database from our browser using:
+
+    'http://public_domain_or_IP/todo_list.php'
+
+![alt text](<Images/todo_list.php website.png>)
+
+This simply shows that my PHP environment id ready to connect and interact with MySQL server.
+
+WOW! This has been quite interesting.
