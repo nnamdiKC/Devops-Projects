@@ -175,6 +175,10 @@ This script will do the following:
 
     and finally list the files in the current directory again'
 
+**Step 1**: Create a file named *nav-linux-filesystem.sh*
+
+**Step 2**: Copy the follwoing code into the file and save
+
 Here goes the script:
 
     #!/bin/bash
@@ -216,8 +220,129 @@ Here goes the script:
     echo "Files in the current directory:"
     ls
 
+
+**Step 3**: Set execute permission on the file with this command:
+
+    'sudo chmod +x nav-linux-filesystem.sh'
+
+**Step 4**: Run the file using this command
+    
+    './nav-linux-filesystem.sh'
+
 ![alt text](<Images/nav-linux-filesystem script.png>)
 
 ![alt text](<Images/nav-linux-filesystem result1.png>)
 
+
+
+### File Operations and Sorting
+
+Here we will write a shell script that will demonstrate file operations and sorting. the script will do the following:
+
+    1. create 3 files (file1.txt, file2.txt, file3.txt) and displays them in their current folder
+    2. Sorts them alphabetically, saves the sorted file in sorted_files.txt and displays the sorted file
+    3. Renames the sorted file to sorted_files_alphabetically.txt
+    4. Finally, displays the content of the final sorted file.
+
+
+**Step 1**: On the terminal, create a file named *sorting.sh* with the command 'touch sorting.sh'
+
+**Step 2**: Copy and paste the following code in the file and save it.
+
+    #!/bin/bash
+
+    # Create three files
+    echo "Creating files..."
+    echo "This is file3." > file3.txt
+    echo "This is file1." > file1.txt
+    echo "This is file2." > file2.txt
+    echo "Files created."
+
+    # Display the files in their current order
+    echo "Files in their current order:"
+    ls
+
+    # Sort the files alphabetically
+    echo "Sorting files alphabetically..."
+    ls | sort > sorted_files.txt
+    echo "Files sorted."
+
+    # Display the sorted files
+echo "Sorted files:"
+cat sorted_files.txt
+
+    # Remove the original files
+    echo "Removing original files..."
+    rm file1.txt file2.txt file3.txt
+    echo "Original files removed."
+
+    # Rename the sorted file to a more descriptive name
+    echo "Renaming sorted file..."
+    mv sorted_files.txt sorted_files_sorted_alphabetically.txt
+    echo "File renamed."
+
+    # Display the final sorted file
+    echo "Final sorted file:"
+    cat sorted_files_sorted_alphabetically.txt
+
+
+**Step 3**: Set the execute permission 'sudo chmod +x sorting.sh'
+
+**Step 4**: Run the script using './sorting.sh'
+
+![alt text](<Images/sorting script.png>)
+
+![alt text](<Images/sorting script result.png>)
+
+
+
+### Working with Numbers and Calculations
+
+This script will do the following:
+
+    1. define 2 variables num1 and num2 with numeric values
+    2. Performs basic arithmetic operations (addition, subtraction, multiplication, division and modulus) and displays the result
+    3. It will also perform complex calculations such as the sqare of num1 and sqaure root of num2.
+
+**Step 1**: On the terminal, create a file named *calculations.sh* with the command 'touch calculations.sh'
+
+**Step 2**: Copy and paste the following code in the file
+
+    #!/bin/bash
+
+    # Define two variables with numeric values
+    num1=10
+    num2=5
+
+    # Perform basic arithmetic operations
+    sum=$((num1 + num2))
+    difference=$((num1 - num2))
+    product=$((num1 * num2))
+    quotient=$((num1 / num2))
+    remainder=$((num1 % num2))
+
+    # Display the results
+    echo "Number 1: $num1"
+    echo "Number 2: $num2"
+    echo "Sum: $sum"
+    echo "Difference: $difference"
+    echo "Product: $product"
+    echo "Quotient: $quotient"
+    echo "Remainder: $remainder"
+
+    # Perform some more complex calculations
+    power_of_2=$((num1 ** 2))
+    square_root=$(echo "sqrt($num2)" | bc)
+
+    # Display the results
+    echo "Number 1 raised to the power of 2: $power_of_2"
+    echo "Square root of number 2: $square_root"
+
+**Step 3**: Set the execute permission 'sudo chmod +x calculations.sh'
+
+**Step 4**: Run the script using './calculations.sh'
+
+![alt text](<Images/calculations script.png>)
+
+![alt text](<Images/calculations result.png>)
 
