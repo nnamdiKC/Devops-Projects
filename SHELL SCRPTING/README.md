@@ -346,3 +346,45 @@ This script will do the following:
 
 ![alt text](<Images/calculations result.png>)
 
+
+
+### File Backup and Timestamping
+
+As a Devops Engineer, Backing up databases and other storage devices is one of the most common tasks I get to carryout. The script we will create here demonstrtes as an example how files are backed up. The script will do the following:
+    1. define the source and backup directory paths
+    2. creates a time stamp using the current date and time
+    3. creates a backup directory with the timestamp appended to its name
+    4. Copies all file from the source to the backup directory using the '*cp -r*' command for recursive copying.
+    5. It displays a message indicating the completion of the backup process and shows the path of the backup directory with the timestamp.
+
+**Step 1**: Create the file *backup.sh* with the command 'touch backup.sh'
+
+**Step 2**: Copy the following code into the file
+
+    #!/bin/bash
+
+    # Define the source directory and backup directory
+    source_dir="/path/to/source_directory"
+    backup_dir="/path/to/backup_directory"
+
+    # Create a timestamp with the current date and time
+    timestamp=$(date +"%Y%m%d%H%M%S")
+
+    # Create a backup directory with the timestamp
+    backup_dir_with_timestamp="$backup_dir/backup_$timestamp"
+
+    # Create the backup directory
+    mkdir -p "$backup_dir_with_timestamp"
+
+    # Copy all files from the source directory to the backup directory
+    cp -r "$source_dir"/* "$backup_dir_with_timestamp"
+
+    # Display a message indicating the backup process is complete
+    echo "Backup completed. Files copied to: $backup_dir_with_timestamp"
+
+**Step 3**: Run 'sudo chmod +x backup.sh' to set execute permission.
+
+**Step 4**: Run the script using './backup.sh'
+
+![alt text](<Images/backup script.png>)
+
