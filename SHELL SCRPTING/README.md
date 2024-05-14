@@ -1,4 +1,4 @@
-#### INTRODUCTION TO SHELL SCRIPTING
+### INTRODUCTION TO SHELL SCRIPTING
 Shell Scripting is a powerful tool that is used to automate tasks, test solutions and improve efficiency. A Shell script is a text file that contains a list of commands that instructs an operating system to perform certain tasks.
 
 ### Shell Scripting Syntax Elements
